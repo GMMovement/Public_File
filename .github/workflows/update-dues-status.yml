@@ -20,9 +20,9 @@ jobs:
             echo "Calling dues status update at $(date)"
             
             response=$(curl -s -w "\n%{http_code}" -X POST \
-              "https://luausfisqltnaxzzsfxa.supabase.co/functions/v1/update-dues-status" \
+              "https://ptshejpesjthpunoooxe.supabase.co/functions/v1/update-dues-status" \
               -H "Content-Type: application/json" \
-              -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imx1YXVzZmlzcWx0bmF4enpzZnhhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTEwMTg2NjgsImV4cCI6MjA2NjU5NDY2OH0.f5humWxDYmE_exXfAlfY4p1WdZaK_wxXPTYfouOaqlQ" \
+              -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InB0c2hlanBlc2p0aHB1bm9vb3hlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDg0Mjk4MTcsImV4cCI6MjA2NDAwNTgxN30.BBrgDUGbmj0rPzNc3aOF5bHkEsE3cm5gEO8MPD3pNWQ" \
               -d "{\"scheduled\": true, \"timestamp\": \"$(date -u +%Y-%m-%dT%H:%M:%SZ)\"}")
             
             # Extract status code (last line)
